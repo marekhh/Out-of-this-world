@@ -20,8 +20,8 @@
 		7E58CF9619C6DBFB00CB2419 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E58CF7819C6DBFA00CB2419 /* UIKit.framework */; };
 		7E58CF9E19C6DBFB00CB2419 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E58CF9C19C6DBFB00CB2419 /* InfoPlist.strings */; };
 		7E58CFA019C6DBFB00CB2419 /* Out_of_this_worldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E58CF9F19C6DBFB00CB2419 /* Out_of_this_worldTests.m */; };
-		7E58CFAB19C6DCD100CB2419 /* OWOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E58CFAA19C6DCD100CB2419 /* OWOuterSpaceTableViewController.m */; };
 		7E58CFAE19C6E56B00CB2419 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E58CFAD19C6E56B00CB2419 /* AstronomicalData.m */; };
+		7E58CFB119C706E900CB2419 /* OWMyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E58CFB019C706E900CB2419 /* OWMyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +52,10 @@
 		7E58CF9B19C6DBFB00CB2419 /* Out of this worldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Out of this worldTests-Info.plist"; sourceTree = "<group>"; };
 		7E58CF9D19C6DBFB00CB2419 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E58CF9F19C6DBFB00CB2419 /* Out_of_this_worldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_worldTests.m; sourceTree = "<group>"; };
-		7E58CFA919C6DCD100CB2419 /* OWOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWOuterSpaceTableViewController.h; sourceTree = "<group>"; };
-		7E58CFAA19C6DCD100CB2419 /* OWOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWOuterSpaceTableViewController.m; sourceTree = "<group>"; };
 		7E58CFAC19C6E56B00CB2419 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
 		7E58CFAD19C6E56B00CB2419 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		7E58CFAF19C706E900CB2419 /* OWMyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMyTableViewController.h; sourceTree = "<group>"; };
+		7E58CFB019C706E900CB2419 /* OWMyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 				7E58CF8319C6DBFB00CB2419 /* OWAppDelegate.h */,
 				7E58CF8419C6DBFB00CB2419 /* OWAppDelegate.m */,
 				7E58CF8619C6DBFB00CB2419 /* Main.storyboard */,
-				7E58CFA919C6DCD100CB2419 /* OWOuterSpaceTableViewController.h */,
-				7E58CFAA19C6DCD100CB2419 /* OWOuterSpaceTableViewController.m */,
+				7E58CFAF19C706E900CB2419 /* OWMyTableViewController.h */,
+				7E58CFB019C706E900CB2419 /* OWMyTableViewController.m */,
 				7E58CF8C19C6DBFB00CB2419 /* Images.xcassets */,
 				7E58CF7B19C6DBFA00CB2419 /* Supporting Files */,
 			);
@@ -254,10 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E58CFAB19C6DCD100CB2419 /* OWOuterSpaceTableViewController.m in Sources */,
 				7E58CF8519C6DBFB00CB2419 /* OWAppDelegate.m in Sources */,
 				7E58CF8119C6DBFB00CB2419 /* main.m in Sources */,
 				7E58CFAE19C6E56B00CB2419 /* AstronomicalData.m in Sources */,
+				7E58CFB119C706E900CB2419 /* OWMyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
