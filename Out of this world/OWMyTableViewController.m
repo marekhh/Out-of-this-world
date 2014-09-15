@@ -7,6 +7,8 @@
 //
 
 #import "OWMyTableViewController.h"
+#import "AstronomicalData.h"
+#import "OWSpaceObject.h"
 
 @interface OWMyTableViewController ()
 
@@ -32,6 +34,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.planets = [[NSMutableArray alloc]init];
+    
+    for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg",planetData[PLANET_NAME]];
+        OWSpaceObject *planet = [[OWSpaceObject alloc]initWithPlanetData:planetData andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:planet];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,21 +55,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (section == 0) {
-        return 2;
-    }
-    else if (section == 1){
-        return 1;
-    }
-    else{
-        return 3;
-    }
+    return [self.planets count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,18 +70,14 @@
     
     // Configure the cell...
     
-    if (indexPath.section == 0) {
-        cell.textLabel.text = @"I am in section 0";
-        cell.backgroundColor = [UIColor redColor];
-    }
-    else if (indexPath.section == 1){
-        cell.textLabel.text = @"Another section";
-        cell.backgroundColor = [UIColor blueColor];
-    }
-    else{
-        cell.textLabel.text = [NSString stringWithFormat:@"cell %i", indexPath.row ];
-        cell.backgroundColor = [UIColor yellowColor];
-    }
+    OWSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+    cell.textLabel.text = planet.name;
+    cell.detailTextLabel.text = planet.nickname;
+    cell.imageView.image = planet.spaceImage;
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.5];
     
     return cell;
 }

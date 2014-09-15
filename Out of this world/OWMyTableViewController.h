@@ -10,4 +10,6 @@
 
 @interface OWMyTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *planets;
+
 @end
